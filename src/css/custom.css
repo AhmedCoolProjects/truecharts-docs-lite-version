@@ -394,7 +394,7 @@ ul ul .table-of-contents__link {
 
 a.navbar__item.navbar__link {
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 a.navbar__item.navbar__link.navbar__link--active::before {
