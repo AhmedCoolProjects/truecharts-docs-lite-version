@@ -100,6 +100,7 @@ const config = {
           src: "svg/logo.svg",
           style: {
             marginLeft: "1.5rem",
+            marginRight: "1.5rem",
           },
         },
         items: [
