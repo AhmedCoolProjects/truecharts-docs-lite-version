@@ -404,7 +404,7 @@ a.navbar__item.navbar__link.navbar__link--active::before {
   left: 0 !important;
   height: 3px !important;
   width: 100% !important;
-  background-color: #fff;
+  background-color: var(--underline-navbar-item-color) !important;
   visibility: visible !important;
   transform-origin: left; /* Start the animation from the left */
   transition: transform 0.3s ease-out;
@@ -418,7 +418,7 @@ a.navbar__item.navbar__link::before {
   left: 0;
   height: 3px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--underline-navbar-item-color) !important;
   transform: scaleX(0); /* Hide the underline initially */
   transform-origin: left; /* Start the animation from the left */
   transition: transform 0.3s ease-out;
