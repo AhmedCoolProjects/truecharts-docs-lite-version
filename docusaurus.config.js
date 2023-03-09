@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon/favicon.ico",
+  favicon: "svg/favicon.svg",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -94,10 +94,13 @@ const config = {
         },
       },
       navbar: {
-        title: "TrueCharts",
+        title: "",
         logo: {
           alt: "TrueCharts logo",
-          src: "img/hotlink-ok/logo/Logo Export PNG Trans/webp/32.webp",
+          src: "svg/logo.svg",
+          style: {
+            marginLeft: "1.5rem",
+          },
         },
         items: [
           { to: "/news", label: "News", position: "left" },
@@ -107,19 +110,9 @@ const config = {
             position: "left",
             label: "Docs",
           },
-          // {
-          //   type: "doc",
-          //   docId: "charts/description_list",
-          //   position: "left",
-          //   label: "Charts"
-          // },
+
           {
             type: "localeDropdown",
-            position: "right",
-          },
-          {
-            href: "https://github.com/truecharts/apps",
-            label: "GitHub",
             position: "right",
           },
         ],
