@@ -32,6 +32,7 @@ html {
   font-size: 0.8rem;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
 .dropdown__link {
@@ -97,6 +98,8 @@ html {
 .footer {
   padding-left: 0;
   padding-right: 0;
+  background-color: transparent !important;
+  border-top: var(--ifm-global-border-width) solid var(--ifm-color-emphasis-200) !important;
 }
 
 .footer__copyright {
@@ -486,4 +489,8 @@ a.navbar__item.navbar__link:hover::before {
   60% {
     transform: translateX(-5px);
   }
+}
+
+.footer__item {
+  margin-top: 10px !important;
 }
