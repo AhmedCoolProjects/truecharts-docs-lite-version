@@ -35,40 +35,47 @@ const data = [
 ];
 
 function HomepageHeader() {
-  const progressRef = useRef(null);
-  const [progress, setProgress] = useState(0);
+  // const progressRef = useRef(null);
+  // const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
-    const progressBar = progressRef.current.querySelector(".progress-bar");
-    const progressValue = progressRef.current.querySelector(".progress-value");
+  // useEffect(() => {
+  //   const progressBar = progressRef.current.querySelector(".progress-bar");
+  //   const progressValue = progressRef.current.querySelector(".progress-value");
 
-    const updateProgress = () => {
-      setProgress((prevProgress) => {
-        const newProgress = prevProgress + 1;
-        progressBar.style.width = `${newProgress}%`;
-        progressValue.textContent = `Goal: €${newProgress + 430}`;
+  //   const updateProgress = () => {
+  //     setProgress((prevProgress) => {
+  //       const newProgress = prevProgress + 1;
+  //       progressBar.style.width = `${newProgress}%`;
+  //       progressValue.textContent = `Goal: €${newProgress + 430}`;
 
-        if (newProgress === 70) {
-          clearInterval(interval);
-        }
+  //       if (newProgress === 70) {
+  //         clearInterval(interval);
+  //       }
 
-        return newProgress;
-      });
-    };
+  //       return newProgress;
+  //     });
+  //   };
 
-    const interval = setInterval(updateProgress, 30);
+  //   const interval = setInterval(updateProgress, 30);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
 
   const { siteConfig } = useDocusaurusContext();
   return (
     <header>
       <div className={styles.container}>
         <h1>{siteConfig.title}</h1>
-        <p>{siteConfig.tagline}</p>
+        <p
+          style={{
+            textTransform: "capitalize",
+          }}
+        >
+          discover our extensive collection of awesome Helm charts and scale
+          apps, crafted to optimize your deployment experience!
+        </p>
 
         <div className={styles.animated_button}>
           <Link
@@ -83,7 +90,7 @@ function HomepageHeader() {
           </Link>
         </div>
 
-        <p>Monthly Funding goal:</p>
+        {/* <p>Monthly Funding goal:</p>
         <div className="progress" ref={progressRef}>
           <div className="progress-bar">
             <div className="progress-value"></div>
@@ -115,7 +122,7 @@ function HomepageHeader() {
               <h2>Sponsor TrueCharts</h2>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </header>
   );
