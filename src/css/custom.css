@@ -407,8 +407,8 @@ ul ul .table-of-contents__link {
 a.navbar__item.navbar__link {
   position: relative;
   height: 100% !important;
-  padding: 1.5rem !important;
-  margin: 0 !important;
+  padding: 1.5rem ;
+  margin: 0 ;
   /* display: inline-block; */
 }
 

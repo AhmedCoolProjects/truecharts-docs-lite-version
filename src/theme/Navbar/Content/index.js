@@ -61,6 +61,11 @@ const socialMediaData = [
     icon: BsFacebook,
     href: "https://www.facebook.com/truecharts",
   },
+  {
+    title: "github",
+    icon: BsGithub,
+    href: "https://github.com/truecharts/apps",
+  },
 ];
 
 export default function NavbarContent() {
@@ -87,50 +92,28 @@ export default function NavbarContent() {
             <a
               key={index}
               href={item.href}
-              style={{
-                textDecoration: "none",
-                color: "inherit",
-              }}
+              
+              className="navbar__item navbar__link"
               target="_blank"
+              style={{
+                padding: 16,
+                marginRight: item.title == "github" ? 32 : 0,
+                marginLeft: item.title == "twitter" ? 24 : 0,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
             >
-              <div
-                style={{
-                  marginRight: "0.8rem",
-                  marginLeft: item.title == "twitter" ? "0.4rem" : "auto",
-                }}
-                className="toggle_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module colorModeToggle_src-theme-Navbar-Content-styles-module"
-              >
                 <button
-                  className="clean-btn toggleButton_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module"
+                  className="clean-btn "
                   type="button"
                 >
                   <item.icon size="1.5rem" />
                 </button>
-              </div>
             </a>
           ))}
-          <a
-            href="https://github.com/truecharts/apps"
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-            }}
-            target="_blank"
-          >
-            <div
-              style={{
-                marginRight: "1.9rem",
-              }}
-              className="toggle_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module colorModeToggle_src-theme-Navbar-Content-styles-module"
-            >
-              <button
-                className="clean-btn toggleButton_node_modules-@docusaurus-theme-classic-lib-theme-ColorModeToggle-styles-module"
-                type="button"
-              >
-                <BsGithub size="1.5rem" />
-              </button>
-            </div>
-          </a>
+    
           <NavbarColorModeToggle className={styles.colorModeToggle} />
           {!searchBarItem && (
             <NavbarSearch>
