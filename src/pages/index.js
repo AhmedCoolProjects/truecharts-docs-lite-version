@@ -6,6 +6,17 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageCard from "@site/src/components/HomepageCard";
 import clsx from "clsx";
+import Lottie from "react-lottie";
+import animationData from "../animations/animation-1.json";
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 
 const data = [
   {
@@ -67,62 +78,39 @@ function HomepageHeader() {
   return (
     <header>
       <div className={styles.container}>
-        <h1>{siteConfig.title}</h1>
-        <p
-          style={{
-            textTransform: "capitalize",
-          }}
-        >
-          discover our extensive collection of awesome Helm charts and scale
-          apps, crafted to optimize your deployment experience!
-        </p>
-
-        <div className={styles.animated_button}>
-          <Link
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-            }}
-            to="/manual/guides/Important-MUST-READ"
-          >
-            <span></span>
-            <h2>TrueNAS SCALE</h2>
-          </Link>
-        </div>
-
-        {/* <p>Monthly Funding goal:</p>
-        <div className="progress" ref={progressRef}>
-          <div className="progress-bar">
-            <div className="progress-value"></div>
-          </div>
-        </div>
-
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-end",
-          }}
-        >
-          <div
-            style={{
-              marginTop: 32,
-            }}
-            className={styles.animated_button}
-          >
-            <Link
+        <div className={styles.header__container}>
+          <div>
+            <h1>{siteConfig.title}</h1>
+            <p
               style={{
-                textDecoration: "none",
-                color: "inherit",
+                textTransform: "capitalize",
               }}
-              to="/sponsor"
             >
-              <span></span>
-              <h2>Sponsor TrueCharts</h2>
-            </Link>
+              discover our extensive collection of awesome Helm charts and scale
+              apps, crafted to optimize your deployment experience!
+            </p>
+
+            <div className={styles.animated_button}>
+              <Link
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+                to="/manual/guides/Important-MUST-READ"
+              >
+                <span></span>
+                <h2>TrueNAS SCALE</h2>
+              </Link>
+            </div>
           </div>
-        </div> */}
+
+          {/* animation */}
+          <div className={styles.animated__lottie}>
+          <Lottie options={defaultOptions} isClickToPauseDisabled={true} />
+          </div>
+        </div>
+
+
       </div>
     </header>
   );

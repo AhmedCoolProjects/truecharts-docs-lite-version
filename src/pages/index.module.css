@@ -34,7 +34,7 @@
   line-height: 3rem;
 }
 .container p {
-  width: 45%;
+  width: 85%;
   font-size: 1.2rem;
 }
 
@@ -141,4 +141,20 @@
 
 [data-theme="light"] .animated_button span {
   background-color: #fff;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+.animated__lottie {
+  width: 100%;
+padding: 0px 120px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
 }
