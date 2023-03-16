@@ -209,8 +209,9 @@ html {
 .navbar {
   border-bottom: var(--ifm-global-border-width) solid
     var(--ifm-color-emphasis-200);
-  padding: 1.5rem;
-  height: auto;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  height: auto; 
 }
 
 .navbar__brand {
@@ -222,6 +223,7 @@ html {
 
 .navbar__logo {
   height: calc(var(--ifm-navbar-height) - var(--ifm-global-border-width));
+  margin-top: 12px !important;
 }
 
 /* Effectively center the logo in the navbar */
@@ -231,6 +233,13 @@ html {
     margin-right: auto;
     /* Because of absolutely placed search icon */
     padding-right: 28px;
+  }
+  .navbar {
+    padding: 1.5rem !important;
+   
+  }
+  .navbar__logo {
+     margin-top: 0px !important;
   }
 }
 
@@ -397,6 +406,9 @@ ul ul .table-of-contents__link {
 
 a.navbar__item.navbar__link {
   position: relative;
+  height: 100% !important;
+  padding: 1.5rem !important;
+  margin: 0 !important;
   /* display: inline-block; */
 }
 
