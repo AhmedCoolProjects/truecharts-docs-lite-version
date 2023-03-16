@@ -124,6 +124,9 @@ html {
   .footer__links {
     justify-content: left;
   }
+  .social__icons__links {
+    display: none !important;
+  }
 }
 
 .footer__col {

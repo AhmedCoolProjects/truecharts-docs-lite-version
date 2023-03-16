@@ -93,7 +93,7 @@ export default function NavbarContent() {
               key={index}
               href={item.href}
               
-              className="navbar__item navbar__link"
+              className="navbar__item navbar__link social__icons__links"
               target="_blank"
               style={{
                 padding: 16,
