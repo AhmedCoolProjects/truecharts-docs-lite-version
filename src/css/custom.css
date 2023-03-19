@@ -11,6 +11,11 @@
   --ifm-font-family-base: "JetBrains Mono Regular";
 }
 
+*,
+html {
+  font-family: "JetBrains Mono Regular" !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
