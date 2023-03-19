@@ -7,8 +7,17 @@ import styles from "./index.module.css";
 import HomepageCard from "@site/src/components/HomepageCard";
 import clsx from "clsx";
 import Lottie from "react-lottie";
+import animationLogoData from "../animations/logo-animation-1.json";
 import animationData from "../animations/animation-1.json";
 
+const defaultLogoOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: animationLogoData,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice",
+  },
+};
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -80,7 +89,21 @@ function HomepageHeader() {
       <div className={styles.container}>
         <div className={styles.header__container}>
           <div>
-            <h1>{siteConfig.title}</h1>
+            <div className={styles.logo__container}>
+              <div className={styles.logo__animated__lottie}>
+                <Lottie
+                  options={defaultLogoOptions}
+                  isClickToPauseDisabled={true}
+                />
+              </div>
+              <h1
+                style={{
+                  color: "#326EE6",
+                }}
+              >
+                {siteConfig.title}
+              </h1>
+            </div>
             <p
               style={{
                 textTransform: "capitalize",
@@ -106,11 +129,9 @@ function HomepageHeader() {
 
           {/* animation */}
           <div className={styles.animated__lottie}>
-          <Lottie options={defaultOptions} isClickToPauseDisabled={true} />
+            <Lottie options={defaultOptions} isClickToPauseDisabled={true} />
           </div>
         </div>
-
-
       </div>
     </header>
   );

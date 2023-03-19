@@ -1,6 +1,16 @@
 @import "custom1.css";
 @import "variables.css";
 
+@font-face {
+  font-family: "JetBrains Mono Regular" !important;
+  src: url("/static/ADAM-CG\ PRO.woff") format("woff") !important;
+}
+
+:root {
+  --ifm-font-family-monospace: "JetBrains Mono Regular";
+  --ifm-font-family-base: "JetBrains Mono Regular";
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -214,7 +224,7 @@ html {
     var(--ifm-color-emphasis-200);
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  height: auto; 
+  height: auto;
 }
 
 .navbar__brand {
@@ -239,10 +249,9 @@ html {
   }
   .navbar {
     padding: 1.5rem !important;
-   
   }
   .navbar__logo {
-     margin-top: 0px !important;
+    margin-top: 0px !important;
   }
 }
 
@@ -410,8 +419,8 @@ ul ul .table-of-contents__link {
 a.navbar__item.navbar__link {
   position: relative;
   height: 100% !important;
-  padding: 1.5rem ;
-  margin: 0 ;
+  padding: 1.5rem;
+  margin: 0;
   /* display: inline-block; */
 }
 

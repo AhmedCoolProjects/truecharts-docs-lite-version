@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "TrueCharts",
+  title: "TRUECHARTS",
   tagline: "Awesome Helm Charts and SCALE Apps",
   url: "https://truecharts.org",
   baseUrl: "/",
