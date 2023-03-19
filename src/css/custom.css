@@ -130,7 +130,7 @@ html {
   gap: 2rem;
 }
 
-@media (max-width: 966px) {
+@media (max-width: 996px) {
   .footer__links {
     justify-content: left;
   }

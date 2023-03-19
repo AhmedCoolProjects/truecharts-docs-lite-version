@@ -55,82 +55,46 @@ const data = [
 ];
 
 function HomepageHeader() {
-  // const progressRef = useRef(null);
-  // const [progress, setProgress] = useState(0);
-
-  // useEffect(() => {
-  //   const progressBar = progressRef.current.querySelector(".progress-bar");
-  //   const progressValue = progressRef.current.querySelector(".progress-value");
-
-  //   const updateProgress = () => {
-  //     setProgress((prevProgress) => {
-  //       const newProgress = prevProgress + 1;
-  //       progressBar.style.width = `${newProgress}%`;
-  //       progressValue.textContent = `Goal: €${newProgress + 430}`;
-
-  //       if (newProgress === 70) {
-  //         clearInterval(interval);
-  //       }
-
-  //       return newProgress;
-  //     });
-  //   };
-
-  //   const interval = setInterval(updateProgress, 30);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, []);
-
   const { siteConfig } = useDocusaurusContext();
   return (
-    <header>
-      <div className={styles.container}>
-        <div className={styles.header__container}>
-          <div>
-            <div className={styles.logo__container}>
-              <div className={styles.logo__animated__lottie}>
-                <Lottie
-                  options={defaultLogoOptions}
-                  isClickToPauseDisabled={true}
-                />
-              </div>
-              <h1
-                style={{
-                  color: "#326EE6",
-                }}
-              >
-                {siteConfig.title}
-              </h1>
+    <header className={styles.container}>
+      <div className={styles.header__container}>
+        <div className={styles.left__container}>
+          <div className={styles.logo__container}>
+            <div className={styles.logo__animated__lottie}>
+              <Lottie
+                options={defaultLogoOptions}
+                isClickToPauseDisabled={true}
+              />
             </div>
-            <p
+            <h1>{siteConfig.title}</h1>
+          </div>
+          <p
+            style={{
+              textTransform: "capitalize",
+            }}
+          >
+            discover our extensive collection of awesome Helm charts and scale
+            apps, crafted to optimize your deployment experience!
+          </p>
+
+          <div className={styles.animated_button}>
+            <Link
               style={{
-                textTransform: "capitalize",
+                textDecoration: "none",
+                color: "inherit",
               }}
+              to="/manual/guides/Important-MUST-READ"
             >
-              discover our extensive collection of awesome Helm charts and scale
-              apps, crafted to optimize your deployment experience!
-            </p>
-
-            <div className={styles.animated_button}>
-              <Link
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-                to="/manual/guides/Important-MUST-READ"
-              >
-                <span></span>
-                <h2>TrueNAS SCALE</h2>
-              </Link>
-            </div>
+              <span></span>
+              <h2>TrueNAS SCALE</h2>
+            </Link>
           </div>
+        </div>
 
-          {/* animation */}
-          <div className={styles.animated__lottie}>
-            <Lottie options={defaultOptions} isClickToPauseDisabled={true} />
-          </div>
+        {/* animation */}
+        <div className={styles.animated__lottie}>
+          <Lottie options={defaultOptions} isClickToPauseDisabled={true} />
         </div>
       </div>
     </header>
@@ -138,19 +102,15 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`TrueCharts`}
-      description="Your source For TrueNAS SCALE Apps<head />"
-    >
+    <Layout title={`TrueCharts`} description="TrueCharts Description here">
       <HomepageHeader />
       <main className={styles.container}>
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           {data.map((cardItem) => (
             <HomepageCard {...cardItem} key={cardItem.title} />
           ))}
-        </div>
+        </div> */}
       </main>
     </Layout>
   );
