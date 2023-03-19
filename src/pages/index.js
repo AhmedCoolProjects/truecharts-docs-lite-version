@@ -106,11 +106,11 @@ export default function Home() {
     <Layout title={`TrueCharts`} description="TrueCharts Description here">
       <HomepageHeader />
       <main className={styles.container}>
-        {/* <div className={styles.grid}>
+        <div className={styles.grid}>
           {data.map((cardItem) => (
             <HomepageCard {...cardItem} key={cardItem.title} />
           ))}
-        </div> */}
+        </div>
       </main>
     </Layout>
   );
