@@ -92,28 +92,24 @@ export default function NavbarContent() {
             <a
               key={index}
               href={item.href}
-              
               className="navbar__item navbar__link social__icons__links"
               target="_blank"
               style={{
-                padding: 16,
-                marginRight: item.title == "github" ? 32 : 0,
-                marginLeft: item.title == "twitter" ? 24 : 0,
+                padding: 10,
+                marginRight: item.title == "github" ? 16 : 0,
+                marginLeft: item.title == "twitter" ? 12 : 0,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
               }}
             >
-                <button
-                  className="clean-btn "
-                  type="button"
-                >
-                  <item.icon size="1.5rem" />
-                </button>
+              <button className="clean-btn " type="button">
+                <item.icon size="1.3rem" />
+              </button>
             </a>
           ))}
-    
+
           <NavbarColorModeToggle className={styles.colorModeToggle} />
           {!searchBarItem && (
             <NavbarSearch>

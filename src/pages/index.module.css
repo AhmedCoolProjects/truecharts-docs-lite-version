@@ -40,8 +40,8 @@
 .animated_button::before {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 996px;
+  height: 996px;
   background-image: conic-gradient(
     transparent,
     transparent,
@@ -53,8 +53,8 @@
 .animated_button::after {
   content: "";
   position: absolute;
-  width: 500px;
-  height: 500px;
+  width: 996px;
+  height: 996px;
   background-image: conic-gradient(
     transparent,
     transparent,
