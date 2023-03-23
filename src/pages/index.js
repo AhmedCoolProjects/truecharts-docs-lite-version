@@ -9,6 +9,7 @@ import clsx from "clsx";
 import Lottie from "react-lottie";
 import animationLogoData from "../animations/logo-animation-1.json";
 import animationData from "../animations/animation-1.json";
+import Users from "../components/Users";
 
 const defaultLogoOptions = {
   loop: true,
@@ -61,12 +62,12 @@ function HomepageHeader() {
       <div className={styles.header__container}>
         <div className={styles.left__container}>
           <div className={styles.logo__container}>
-            <div className={styles.logo__animated__lottie}>
+            {/* <div className={styles.logo__animated__lottie}>
               <Lottie
                 options={defaultLogoOptions}
                 isClickToPauseDisabled={true}
               />
-            </div>
+            </div> */}
             <h1>{siteConfig.title}</h1>
           </div>
           <p
@@ -106,11 +107,21 @@ export default function Home() {
     <Layout title={`TrueCharts`} description="TrueCharts Description here">
       <HomepageHeader />
       <main className={styles.container}>
+        <h1>
+          <span>Why</span> TrueCharts
+        </h1>
         <div className={styles.grid}>
           {data.map((cardItem) => (
             <HomepageCard {...cardItem} key={cardItem.title} />
           ))}
         </div>
+        <br/>
+        <br/>
+        <h1>
+          <span>What TrueCharts</span> Users Say
+        </h1>
+        <br/>
+        <Users/>
       </main>
     </Layout>
   );

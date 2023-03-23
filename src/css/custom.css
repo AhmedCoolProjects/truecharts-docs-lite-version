@@ -1,6 +1,11 @@
 @import "custom1.css";
 @import "variables.css";
 
+
+@tailwind utilities;
+@tailwind components;
+
+
 @font-face {
   font-family: "ADAM-CG-PRO" !important;
   src: url("/static/ADAM-CG\ PRO.woff") format("woff") !important;

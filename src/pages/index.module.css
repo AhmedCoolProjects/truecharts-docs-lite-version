@@ -16,6 +16,19 @@
   font-size: 1.2rem;
 }
 
+.container h1{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+}
+.container h1 span {
+  text-decoration: underline;
+  color: #326ee6;
+  text-underline-offset: 12px;
+  text-decoration-color: #d400df;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
