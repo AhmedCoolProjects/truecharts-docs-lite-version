@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+import SectionTitle from "./SectionTitle";
 
 const data = [
   {
@@ -60,10 +61,17 @@ export default function Users() {
     ]
   );
   return (
+    <div className="container md:mt-24 mt-16">
+      <SectionTitle
+        coloredTitle="Users"
+        firstTitle="What TrueCharts"
+        secondTitle="Say"
+      />
     <div ref={sliderRef} className="keen-slider">
       {data.map((item, index) => (
         <CardItem name="" message="" {...item} key={index} />
       ))}
+    </div>
     </div>
   );
 }

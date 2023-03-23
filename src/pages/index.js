@@ -10,6 +10,8 @@ import Lottie from "react-lottie";
 import animationLogoData from "../animations/logo-animation-1.json";
 import animationData from "../animations/animation-1.json";
 import Users from "../components/Users";
+import Love from "../components/Love";
+import BackToTop from "../components/BackToTop";
 
 const defaultLogoOptions = {
   loop: true,
@@ -28,32 +30,6 @@ const defaultOptions = {
   },
 };
 
-const data = [
-  {
-    Svg: require("@site/static/img/easy-to-use-icon.svg").default,
-    SvgHover: require("@site/static/img/easy-to-use-icon.svg").default,
-    title: "Easy to Deploy",
-    description:
-      "TrueCharts features a neatly organized catalog of Apps for TrueNAS SCALE.",
-    link: "",
-  },
-  {
-    Svg: require("@site/static/img/file-settings-icon.svg").default,
-    SvgHover: require("@site/static/img/file-settings-icon.svg").default,
-    title: "Consistent Ecosystem",
-    description:
-      "All TrueCharts Apps, are build upon the same solid foundation. All featuring the same deployment experience",
-    link: "",
-  },
-  {
-    Svg: require("@site/static/img/shield-heart-icon.svg").default,
-    SvgHover: require("@site/static/img/shield-heart-icon.svg").default,
-    title: "Stability",
-    description:
-      "TrueCharts has stability as a prime importance: What is running, should stay running.",
-    link: "",
-  },
-];
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -106,22 +82,12 @@ export default function Home() {
   return (
     <Layout title={`TrueCharts`} description="TrueCharts Description here">
       <HomepageHeader />
-      <main className={styles.container}>
-        <h1>
-          <span>Why</span> TrueCharts
-        </h1>
-        <div className={styles.grid}>
-          {data.map((cardItem) => (
-            <HomepageCard {...cardItem} key={cardItem.title} />
-          ))}
-        </div>
+      <main >
+        <Love />
+        <Users/>   
         <br/>
         <br/>
-        <h1>
-          <span>What TrueCharts</span> Users Say
-        </h1>
-        <br/>
-        <Users/>
+        <BackToTop/>     
       </main>
     </Layout>
   );
